@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Dashboard</h1>
+<b>ID={{session.i}}</b>
+Question: {{session.ques}}<br>
+A. {{session.a}}<br>
+B. {{session.b}}<br>
+C. {{session.c}}<br>
+D. {{session.d}}<br>
+
+<form method = 'POST' action="">
+  <div class="form-group">
+    <label>Your Answer</label>
+    <input type="text" name="ans" class="form-control" value={{request.form.ans}}>
+ </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+{% endblock %}

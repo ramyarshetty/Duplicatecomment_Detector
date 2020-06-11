@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+ <h1 style="color:blue;">Post Your Answer</h1>
+ <form method = 'POST' action="">
+   <div class="form-group">
+     <label>Enter the question id you want to answer to.</label>
+     <input type="text" name="id1" class="form-control" value={{request.form.id1}}>
+
+  </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}

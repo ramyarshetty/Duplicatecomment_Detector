@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Questions</h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Question</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  {% for question in questions %}
+  <tr>
+    <th>{{question.qid}}</th>
+    <th>{{question.ques}}</th>
+    <th>{{question.a}}</th>
+    <th>{{question.b}}</th>
+    <th>{{question.c}}</th>
+    <th>{{question.d}}</th>
+  </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}
